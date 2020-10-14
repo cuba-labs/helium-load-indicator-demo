@@ -1,0 +1,28 @@
+/* Define your theme modifications inside next mixin */
+@mixin com_company_demo-helium-ext {
+  div.helium div.v-loading-indicator,
+  div.v-loading-indicator {
+    background-color: rgba(246, 246, 246, 0.50) !important;
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+
+  }
+
+  .v-loading-indicator[style*="block"] {
+    background-color: rgba(246, 246, 246, 0.50) !important;
+    min-width: 100vw;
+    min-height: 100%;
+    animation: unset !important;
+    pointer-events: unset !important
+  }
+
+  .v-loading-indicator:before {
+    content: "";
+    background-image: url("../branding/indicator.gif");
+    width: 100px;
+    height: 100px;
+    margin: calc(50vh - 50px) auto;
+    display: block;
+    background-size: contain;
+  }
+}
